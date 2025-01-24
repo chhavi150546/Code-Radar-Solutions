@@ -1,12 +1,13 @@
 #include <stdio.h>
 
-int main() {
+int main(){
     int x = 5;
     int y = 3;
-    if (a>b) {
+
+    if(x>y){
         printf("True\n");
-    } else {
+      }  else {
             printf("False\n");
-    }    
-    return 0;
-}
+        }
+        return 0;
+    }
