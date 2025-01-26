@@ -1,10 +1,10 @@
 #include <stdio.h>
 
 int main(){
-    int x = 5;
-    int y = 3;
+    int a,b;
+    scanf("%d %d",&a,&b);
 
-    if(x>y){
+    if(a>b){
         printf("True\n");
       }  else {
             printf("False\n");
