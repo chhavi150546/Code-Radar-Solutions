@@ -1,7 +1,5 @@
 #include <stdio.h>
 
-
-
 int main() {
     int a,b;
     scanf("%d %d",&a,&b);
@@ -11,6 +9,6 @@ int main() {
     else{
         printf("False");
     }
-    printf("%s", welcome());
+    
     return 0;
 }
