@@ -6,10 +6,10 @@ int main() {
         printf("Profit");
     }
     else if(costPrice>sellingPrice){
-        printf("Loss")
+        printf("Loss");
     }
     else{
-        printf("No Profit No Loss")
+        printf("No Profit No Loss");
     }
     return 0;
 }
