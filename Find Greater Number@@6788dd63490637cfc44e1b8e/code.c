@@ -8,6 +8,6 @@ int main() {
     else{
         greatest=b;
     }
-    printf("Greater integer:%d\n",greatest)
+    printf("Greater integer:%d\n",greatest);
     return 0;
 }
