@@ -1,13 +1,13 @@
 #include <stdio.h>
 int main() {
-    int a,b,greatest;
+    int a,b,greater integer;
     scanf("%d %d",&a,&b)
     if(a>=b){
-        greatest=a;
+        greater integer=a;
     }
     else{
-        greatest=b;
+        greater integer=b;
     }
-    printf("Greater integer:%d\n",greatest);
+    printf("Greater integer:%d\n",greater integer);
     return 0;
 }
