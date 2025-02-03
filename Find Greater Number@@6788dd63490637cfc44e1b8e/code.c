@@ -1,13 +1,12 @@
 #include <stdio.h>
 int main() {
-    int a,b,greater integer;
+    int a,b;
     scanf("%d %d",&a,&b)
-    if(a>=b){
-        greater integer=a;
+    if(a>b){
+        printf("%d",a);
     }
     else{
-        greater integer=b;
+        printf("%d",b);
     }
-    printf("Greater integer:%d\n",greater integer);
     return 0;
 }
