@@ -1,8 +1,8 @@
 #include <stdio.h>
 int main() {
-    int x,y,z;
-    scanf("%d %d %d",&x,&y,&z)
-    if((x+y>z)&&(x+y>y)&&(y+z>x)){
+    int a,b,c;
+    scanf("%d %d %d",&a,&b,&c)
+    if((a+b>c)&&(a+c>b)&&(b+c>b)){
         printf("Valid");
     }
     else{
