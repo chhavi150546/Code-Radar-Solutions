@@ -1,6 +1,6 @@
 #include <stdio.h>
 int main() {
-    char light='R','G','Y';
+    char light;
     scanf("%ch",&light);
     switch(light){
         case 'R':
