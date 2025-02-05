@@ -3,18 +3,18 @@
 int main() {
     char ch;
     scanf("%c",&ch);
-    if(isalpha(ch)){
-        if(ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u'||ch=='A'||ch=='E'||ch='I'||ch=='O'||ch='U'){
-        printf("Vowel");
-    else{
+    char lowerCh=tolower(ch);
+    if (lowerCh == 'a' || lowerCh=='e' || lowerCh=='i' || lowerCh=='o' || lowerCh=='u'){
+        printf("Vowel\n");
+   
+    }
+    else if (isalpha(ch)) {
         printf("Consonant");
     }
-    }
-    else if(isdigit(ch)){
+    else if(isdigit(ch)) {
         printf("Digit");
     }
     else{
-        printf("Special Character");
+        printf("Special Character")
     }
-    return 0;
 }
