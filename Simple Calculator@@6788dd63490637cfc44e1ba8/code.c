@@ -1,9 +1,9 @@
 #include <stdio.h>
 int main() {
     char op;
-    int a,b;
+    double a,b,result;
     scanf("%c",&op)
-    scanf("%d %d",&a,&b);
+    scanf("%lf %lf",&a,&b);
     switch(op){
         case '+':
         printf("%d",a+b);
