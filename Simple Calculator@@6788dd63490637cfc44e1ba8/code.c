@@ -9,20 +9,20 @@ int main() {
 
     if (str == '+') {
         result = a + b;
-        printf("%.2f", result); // print result as double
+        printf("%d", result); // print result as double
     } else if (str == '-') {
         result = a - b;
-        printf("%.2f", result);
+        printf("%d", result);
     } else if (str == '/') {
         if (b == 0) {
             printf("error"); // check for division by zero
         } else {
             result = a / b;
-            printf("%.2f", result);
+            printf("%d", result);
         }
     } else if (str == '*') {
         result = a * b;
-        printf("%.2f", result);
+        printf("%d", result);
     } else {
         printf("error"); // handle invalid operators
     }
