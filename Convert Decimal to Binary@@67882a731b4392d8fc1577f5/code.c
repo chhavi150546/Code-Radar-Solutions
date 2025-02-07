@@ -12,12 +12,12 @@ void decimalToBinary(int n) {
 
 int main() {
     int n;
-    printf("\n");
+    printf("");
     scanf("%d", &n);
     if (n == 0) {
         printf("0");
     } else {
-        printf("\n");
+        printf("");
         decimalToBinary(n);
     }
     return 0;
