@@ -6,11 +6,11 @@ int main() {
     scanf("%lf %lf %c",&a,&b,&str);
     if (str=='+'){
         result=a+b;
-        printf("%d\n",result);
+        printf("%d",result);
     }
     else if(str=='-'){
         result=a-b;
-        printf("%d\n",result);
+        printf("%d",result);
     }
     else if(str='/'){
         if(b==0){
@@ -18,11 +18,11 @@ int main() {
         }
         else{
             result=a/b;
-            printf("%d\n",result);
+            printf("%d",result);
         }
     }
     else if(str=='*'){
-        result=a*b
+        result=a*b;
         printf("%d\n",result);
     }
     else{
