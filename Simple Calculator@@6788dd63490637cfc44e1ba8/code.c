@@ -22,8 +22,7 @@ int main() {
         }
     }
     else if(str=='*'){
-        result=a*b;
-        printf("%d",result);
+        printf("%d",a*b);
     }
     else{
         printf("error");
