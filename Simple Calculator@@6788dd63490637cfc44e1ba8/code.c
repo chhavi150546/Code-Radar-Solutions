@@ -1,32 +1,41 @@
 #include <stdio.h>
+
 int main() {
-    double a,b;
-    int result;
-    char str;
-    scanf("%lf %lf %c",&a,&b,&str);
-    if (str=='+'){
-        result=a+b;
-        printf("%d",result);
+    char operator;
+    double a, b, result;
+
+    // Prompt user to enter an operator (+, -, *, /)
+    scanf("%c", &operator);
+
+    // Prompt user to enter two operands
+    scanf("%lf %lf", &a, &b);
+
+    switch (operator) {
+        case '+':
+            result = a + b;
+            printf("%.2lf + %.2lf = %.2lf", first, second, result);
+            break;
+        case '-':
+            result = first - second;
+            printf("%.2lf - %.2lf = %.2lf", first, second, result);
+            break;
+        case '*':
+            result = first * second;
+            printf("%.2lf * %.2lf = %.2lf", first, second, result);
+            break;
+        case '/':
+            // Check if the divisor is zero
+            if (second != 0) {
+                result = first / second;
+                printf("%.2lf / %.2lf = %.2lf", first, second, result);
+            } else {
+                printf("Error!");
+            }
+            break;
+        default:
+            // Handle invalid operator input
+            printf("Error");
     }
-    else if(str=='-'){
-        result=a-b;
-        printf("%d",result);
-    }
-    else if(str='/'){
-        if(b==0){
-            printf("error");
-        }
-        else{
-            result=a/b;
-            printf("%d",result);
-        }
-    }
-    else if(str=='*'){
-        result=a*b;
-        printf("%d",result);
-    }
-    else{
-        printf("error");
-    }
+
     return 0;
 }
