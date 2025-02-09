@@ -2,17 +2,18 @@
 
 int main() {
     char operator;
-    double a, b, result;
+    double first, second, result;
 
     // Prompt user to enter an operator (+, -, *, /)
+
     scanf("%c", &operator);
 
     // Prompt user to enter two operands
-    scanf("%lf %lf", &a, &b);
+    scanf("%lf %lf", &first, &second);
 
     switch (operator) {
         case '+':
-            result = a + b;
+            result = first + second;
             printf("%.2lf + %.2lf = %.2lf", first, second, result);
             break;
         case '-':
@@ -29,13 +30,14 @@ int main() {
                 result = first / second;
                 printf("%.2lf / %.2lf = %.2lf", first, second, result);
             } else {
-                printf("Error!");
+                printf("Error! Division by zero.");
             }
             break;
         default:
             // Handle invalid operator input
-            printf("Error");
+            printf("Error! Invalid operator.");
     }
 
     return 0;
 }
+
