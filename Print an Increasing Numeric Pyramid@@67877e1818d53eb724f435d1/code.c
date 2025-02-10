@@ -4,7 +4,7 @@ int main() {
     int rows, num = 1;
 
     // Ask the user to input the number of rows
-    printf("Enter the number of rows for the pyramid: ");
+
     scanf("%d", &rows);
 
     // Outer loop to print each row
