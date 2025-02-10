@@ -11,18 +11,10 @@ int main() {
     for (int i = 1; i <= rows; i++) {
         // Inner loop to print numbers alternately
         for (int j = 1; j <= i; j++) {
-            // Print 1 for even index (starting from 1) and 0 for odd index
-            if (j % 2 == 1) {
-                printf("1 ");
-            } else {
-                printf("0 ");
-            }
-        }
-        
-        // Move to the next line after printing each row
-        printf("\n");
-    }
-
-    return 0;
-}
+            // If the row is odd, start with 1; if the row is even, start with 0
+            if (i % 2 == 1) {
+                // Print 1 for odd index (starting from 1), 0 for even index
+                if (j % 2 == 1) {
+                    printf("1 ");
+               
 
