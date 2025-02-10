@@ -4,7 +4,7 @@ int main() {
     int rows;
 
     // Ask the user to input the number of rows
-    printf("Enter the number of rows for the triangle: ");
+
     scanf("%d", &rows);
 
     // Outer loop for each row
