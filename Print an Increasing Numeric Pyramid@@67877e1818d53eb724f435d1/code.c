@@ -1,24 +1,28 @@
 #include <stdio.h>
 
 int main() {
-    int rows, i, j;
-    
-    // Taking input from the user
+    int rows, num = 1;
+
+    // Ask the user to input the number of rows
+    printf("Enter the number of rows for the pyramid: ");
     scanf("%d", &rows);
-    
-    // Loop through each row
-    for (i = 1; i <= rows; i++) {
-        // Printing spaces
-        for (j = 1; j <= rows - i; j++) {
-            printf("  ");
+
+    // Outer loop to print each row
+    for (int i = 1; i <= rows; i++) {
+        // Print leading spaces
+        for (int j = 1; j <= rows - i; j++) {
+            printf(" ");
         }
-        // Printing numbers
-        for (j = 1; j <= i; j++) {
-            printf("%d ", j);
+
+        // Print numbers in the pyramid
+        for (int j = 1; j <= i; j++) {
+            printf("%d ", num++);
         }
-        // Moving to the next line
+
+        // Move to the next line after each row
         printf("\n");
     }
-    
+
     return 0;
 }
+
