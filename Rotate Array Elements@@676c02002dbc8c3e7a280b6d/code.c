@@ -27,7 +27,7 @@ void rotateRight(int arr[], int n, int k) {
 }
 
 int main() {
-    int arr[] = {1, 2, 3, 4, 5, 6, 7};
+    int arr[] = 
     int n = sizeof(arr) / sizeof(arr[0]);
     int k = 3; // Number of positions to rotate
 
