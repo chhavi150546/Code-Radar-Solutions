@@ -1,25 +1,43 @@
 #include <stdio.h>
 
-int main() {
-    int rows, number = 1, i, j, space;
-    
-    // Taking input from the user
-    scanf("%d", &rows);
-    
-    // Loop through each row
-    for (i = 1; i <= rows; i++) {
-        // Printing spaces to form the pyramid
-        for (space = 1; space <= rows - i; space++) {
-            printf("  ");
-        }
-        // Printing numbers
-        for (j = 1; j <= i; j++) {
-            printf("%d ", number);
-            number++;
-        }
-        // Moving to the next line
-        printf("\n");
+void rotateRight(int arr[], int n, int k) {
+    // Normalize the number of rotations
+    k = k % n;
+
+    // Reverse the entire array
+    for (int i = 0; i < n / 2; i++) {
+        int temp = arr[i];
+        arr[i] = arr[n - i - 1];
+        arr[n - i - 1] = temp;
     }
-    
+
+    // Reverse the first k elements
+    for (int i = 0; i < k / 2; i++) {
+        int temp = arr[i];
+        arr[i] = arr[k - i - 1];
+        arr[k - i - 1] = temp;
+    }
+
+    // Reverse the remaining n-k elements
+    for (int i = k; i < (n + k) / 2; i++) {
+        int temp = arr[i];
+        arr[i] = arr[n - i + k - 1];
+        arr[n - i + k - 1] = temp;
+    }
+}
+
+int main() {
+    int arr[] = {1, 2, 3, 4, 5, 6, 7};
+    int n = sizeof(arr) / sizeof(arr[0]);
+    int k = 3; // Number of positions to rotate
+
+    rotateRight(arr, n, k);
+
+    printf("Rotated array: ");
+    for (int i = 0; i < n; i++) {
+        printf("%d ", arr[i]);
+    }
+
     return 0;
 }
+
