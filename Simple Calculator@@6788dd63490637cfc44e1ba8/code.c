@@ -12,7 +12,7 @@ int main(){
     }
     else if(op='/'){
         if(b==0){
-            printf("error")
+            printf("error");
         }
         else{
             printf("%d",a/b);
