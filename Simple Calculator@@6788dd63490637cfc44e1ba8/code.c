@@ -36,6 +36,7 @@ int main() {
         default:
             // Handle invalid operator input
             printf("Error! Invalid operator.");
+            break;
     }
 
     return 0;
