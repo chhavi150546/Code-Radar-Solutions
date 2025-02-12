@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 int main(){
     int a,b;
     char op;
@@ -22,5 +21,5 @@ int main(){
     else{
         printf("%d",a*b);
     }
-    return 0;
+
 }
