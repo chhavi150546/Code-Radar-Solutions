@@ -33,7 +33,7 @@ int main() {
                 printf("Error! Division by zero.");
             }
             break;
-        default:
+
   
     }
 
