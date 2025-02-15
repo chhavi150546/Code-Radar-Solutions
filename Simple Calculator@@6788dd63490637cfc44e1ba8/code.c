@@ -9,7 +9,7 @@ int main(){
     else if(op=='-'){
         printf("%d",a-b);
     }
-    else if(op='/'){
+    else if(op=='/'){
         if(b==0){
             printf("error");
         }
@@ -18,7 +18,7 @@ int main(){
         }
     
     }
-    else if(op='*'){
+    else if(op=='*'){
         printf("%d",a*b);
     }
     else{
