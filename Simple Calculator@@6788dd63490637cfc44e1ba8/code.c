@@ -18,7 +18,7 @@ int main(){
         }
     
     }
-    else if(op='*'){
+    else if(op=='*'){
         printf("%d",a*b);
     }
     else{
