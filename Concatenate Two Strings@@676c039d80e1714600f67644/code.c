@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 // Function to concatenate two strings
 void concatenate(char *result, const char *str1, const char *str2) {
