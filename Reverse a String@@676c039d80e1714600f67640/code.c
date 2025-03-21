@@ -1,35 +1,33 @@
 #include <stdio.h>
 #include <string.h>
 
-int main() {
-    char str[100];
-
-    // Input string
-    printf("Enter a string: ");
-    gets(str);  // Using gets() to read a string with spaces
-
-    // Reverse using strrev()
-    strrev(str);
-
-    // Print reversed string
-    printf("Reversed string: %s\n", str);
-
-    return 0;
+// Function to reverse a string
+void reverseString(char *str) {
+    int i, len = strlen(str);
+    char temp;
+    
+    for (i = 0; i < len / 2; i++) {
+        temp = str[i];
+        str[i] = str[len - i - 1];
+        str[len - i - 1] = temp;
+    }
 }
 
-
 int main() {
     char str[100];
 
-    // Taking input from the user
+    // Using fgets instead of gets
+    printf("Enter a string: ");
+    fgets(str, sizeof(str), stdin);
 
-    gets(str);
+    // Remove trailing newline character from fgets
+    str[strcspn(str, "\n")] = 0; 
 
-    // Reversing the string
+    // Reverse the string
     reverseString(str);
 
-    // Printing the reversed string
-    printf("%s\n", str);
+    // Print the reversed string
+    printf("Reversed string: %s\n", str);
 
     return 0;
 }
