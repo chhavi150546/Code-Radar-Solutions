@@ -1,20 +1,22 @@
 #include <stdio.h>
 #include <string.h>
 
-void reverseString(char* str) {
-    int length, i;
-    char temp;
+int main() {
+    char str[100];
 
-    // Calculating the length of the string
-    length = strlen(str);
+    // Input string
+    printf("Enter a string: ");
+    gets(str);  // Using gets() to read a string with spaces
 
-    // Swapping characters from the start and the end of the string
-    for (i = 0; i < length / 2; i++) {
-        temp = str[i];
-        str[i] = str[length - 1 - i];
-        str[length - 1 - i] = temp;
-    }
+    // Reverse using strrev()
+    strrev(str);
+
+    // Print reversed string
+    printf("Reversed string: %s\n", str);
+
+    return 0;
 }
+
 
 int main() {
     char str[100];
