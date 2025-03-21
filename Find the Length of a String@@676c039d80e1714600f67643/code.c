@@ -12,7 +12,7 @@ int stringLength(const char *str) {
 int main() {
     char str[100];
 
-    printf("Enter a string: ");
+
     fgets(str, sizeof(str), stdin);
 
     // Remove trailing newline character if present
