@@ -17,7 +17,7 @@ int main() {
     char str[100];
 
     // Using fgets instead of gets
-    printf("Enter a string: ");
+
     fgets(str, sizeof(str), stdin);
 
     // Remove trailing newline character from fgets
