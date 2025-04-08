@@ -14,13 +14,13 @@ bool isBinaryString(char *str) {
 
 int main() {
     char str[100];
-    printf("Enter a string: ");
+    printf("");
     scanf("%s", str);
 
     if (isBinaryString(str)) {
-        printf("The string consists of only '0' and '1'.\n");
+        printf("Yes\n");
     } else {
-        printf("The string contains characters other than '0' and '1'.\n");
+        printf("No\n");
     }
 
     return 0;
