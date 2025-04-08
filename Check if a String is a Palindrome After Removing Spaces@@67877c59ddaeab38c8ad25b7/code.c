@@ -15,7 +15,7 @@ bool isBinaryString(char *str) {
 
 int main() {
     char str[100];
-    printf("");
+
     scanf("%s", str);
 
     if (isBinaryString(str)) {
