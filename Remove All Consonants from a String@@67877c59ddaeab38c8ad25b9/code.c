@@ -28,7 +28,7 @@ int main() {
     str[strcspn(str, "\n")] = '\0'; // Remove trailing newline character
 
     removeConsonants(str);
-    printf(" %s\n", str);
+    printf("%s\n", str);
 
     return 0;
 }
