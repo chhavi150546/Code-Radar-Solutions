@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void selectionSort(int arr[], int n) {
+int selectionSort(int arr[], int n) {
     for (int i = 0; i < n - 1; i++) {
         // Find the minimum element in the unsorted part of the array
         int minIndex = i;
@@ -17,7 +17,7 @@ void selectionSort(int arr[], int n) {
     }
 }
 
-void printArray(int arr[], int n) {
+int printArray(int arr[], int n) {
     for (int i = 0; i < n; i++) {
         printf("%d ", arr[i]);
     }
@@ -49,3 +49,17 @@ int main() {
 
     return 0;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
