@@ -26,27 +26,17 @@ int printArray(int arr[], int n) {
 
 int main() {
     int n;
-
-    // Ask the user for the number of elements
-   
     scanf("%d", &n);
-
     int arr[n];
-
-    // Input elements from the user
     printf("%d", n);
     for (int i = 0; i < n; i++) {
         scanf("%d", &arr[i]);
     }
-
     printf("\n");
     printArray(arr, n);
-
     selectionSort(arr, n);
-
     printf("\n");
     printArray(arr, n);
-
     return 0;
 }
 
