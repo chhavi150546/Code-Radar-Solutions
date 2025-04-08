@@ -1,34 +1,29 @@
-// Your code here...
 #include <stdio.h>
 #include <string.h>
 
-#define MAX_CHAR 256
-
-char mostFrequentChar(char *str) {
-    int freq[MAX_CHAR] = {0}; // Array to store frequency of each character
-    char result = '\0';       // Character with maximum frequency
-    int maxFreq = 0;          // Maximum frequency
+int main() {
+    char str[1000];
+    int freq[26] = {0};
+    scanf("%[^\n]%*c", str); // Read the entire line including spaces
 
     for (int i = 0; str[i] != '\0'; i++) {
-        freq[str[i]]++; // Increment frequency of current character
-    }
-
-    for (int i = 0; i < MAX_CHAR; i++) {
-        if (freq[i] > maxFreq || (freq[i] == maxFreq && i < result)) {
-            maxFreq = freq[i];
-            result = i; // Update result to the current character
+        if (str[i] >= 'a' && str[i] <= 'z') {
+            freq[str[i] - 'a']++;
         }
     }
-    return result;
-}
 
-int main() {
-    char str[100];
-    printf("Enter a string: ");
-    scanf("%s", str);
+    int maxFreq = 0;
+    char result = 'z' + 1;
 
-    char result = mostFrequentChar(str);
-    printf("The most frequent character is '%c'\n", result);
+    for (int i = 0; i < 26; i++) {
+        if (freq[i] > maxFreq) {
+            maxFreq = freq[i];
+            result = 'a' + i;
+        } else if (freq[i] == maxFreq && ('a' + i) < result) {
+            result = 'a' + i;
+        }
+    }
 
+    printf("%c\n", result);
     return 0;
 }
