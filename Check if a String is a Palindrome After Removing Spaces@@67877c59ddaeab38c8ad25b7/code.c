@@ -19,9 +19,9 @@ int main() {
     scanf("%s", str);
 
     if (isBinaryString(str)) {
-        printf("Yes\n");
-    } else {
         printf("No\n");
+    } else {
+        printf("Yes\n");
     }
 
     return 0;
