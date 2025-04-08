@@ -23,7 +23,7 @@ void removeConsonants(char *str) {
 
 int main() {
     char str[100];
-    printf("Enter a string: ");
+    printf("");
     fgets(str, sizeof(str), stdin); // Use fgets to read input with spaces
     str[strcspn(str, "\n")] = '\0'; // Remove trailing newline character
 
