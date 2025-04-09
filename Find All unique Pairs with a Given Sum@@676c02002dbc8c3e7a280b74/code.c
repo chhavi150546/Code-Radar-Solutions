@@ -1,9 +1,18 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// Function to sort an array (ascending)
-int compare(const void *a, const void *b) {
-    return (*(int*)a - *(int*)b);
+typedef struct {
+    int x, y;
+} Pair;
+
+// Comparator for qsort (lexicographic pair sort)
+int compare_pairs(const void *a, const void *b) {
+    Pair *p1 = (Pair *)a;
+    Pair *p2 = (Pair *)b;
+    if (p1->x != p2->x)
+        return p1->x - p2->x;
+    else
+        return p1->y - p2->y;
 }
 
 int main() {
@@ -13,29 +22,43 @@ int main() {
 
     for (int i = 0; i < n; i++)
         scanf("%d", &arr[i]);
-
+    
     scanf("%d", &target);
 
-    // Sort the array to handle unique pairs easily
-    qsort(arr, n, sizeof(int), compare);
-
-    int found = 0;
+    Pair pairs[n * n];
+    int count = 0;
 
     for (int i = 0; i < n - 1; i++) {
-        // Skip duplicate elements for first number
-        if (i > 0 && arr[i] == arr[i - 1]) continue;
-
         for (int j = i + 1; j < n; j++) {
-            // Skip duplicate pairs
-            if (j > i + 1 && arr[j] == arr[j - 1]) continue;
-
             if (arr[i] + arr[j] == target) {
-                printf("%d %d\n", arr[i], arr[j]);
-                found = 1;
+                int a = arr[i], b = arr[j];
+                if (a > b) { int temp = a; a = b; b = temp; }
+
+                // Check if this pair already exists
+                int duplicate = 0;
+                for (int k = 0; k < count; k++) {
+                    if (pairs[k].x == a && pairs[k].y == b) {
+                        duplicate = 1;
+                        break;
+                    }
+                }
+                if (!duplicate) {
+                    pairs[count].x = a;
+                    pairs[count].y = b;
+                    count++;
+                }
             }
         }
     }
 
+    // Sort the collected pairs
+    qsort(pairs, count, sizeof(Pair), compare_pairs);
+
+    for (int i = 0; i < count; i++) {
+        printf("%d %d\n", pairs[i].x, pairs[i].y);
+    }
+
     return 0;
 }
+
 
