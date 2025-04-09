@@ -28,20 +28,20 @@ int main() {
     for (int i = 0; i < n; i++) {
         printf("%d:\n", i + 1);
 
-        printf("Roll number: ");
+       
         scanf("%d", &students[i].rollNumber);
         getchar(); // Consume newline character left by scanf
 
-        printf("Name: ");
+    
         fgets(students[i].name, sizeof(students[i].name), stdin);
         students[i].name[strcspn(students[i].name, "\n")] = '\0'; // Remove newline character
 
-        printf("Marks: ");
+       
         scanf("%f", &students[i].marks);
     }
 
     // Display student details in the specified format
-    printf("\nStudent Details:\n");
+  
     for (int i = 0; i < n; i++) {
         printf("Roll Number: %d Name: %s Marks: %.2f\n", students[i].rollNumber, students[i].name, students[i].marks);
     }
