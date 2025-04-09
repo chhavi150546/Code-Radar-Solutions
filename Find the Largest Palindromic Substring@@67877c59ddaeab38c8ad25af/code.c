@@ -29,7 +29,7 @@ void findLargestPalindrome(char *str) {
         }
     }
 
-    printf("The largest palindromic substring is: ");
+    
     for (int i = startIdx; i < startIdx + maxLength; i++) {
         putchar(str[i]);
     }
