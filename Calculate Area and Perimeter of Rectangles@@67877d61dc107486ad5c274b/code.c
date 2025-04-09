@@ -28,8 +28,8 @@ int main() {
     for (int i = 0; i < n; i++) {
         float area = r[i].length * r[i].breadth;
         float perimeter = 2 * (r[i].length + r[i].breadth);
-        printf("\nRectangle %d:", i + 1);
-        printf("Area = %.2f", area);
+        printf("\nRectangle %d: ", i + 1);
+        printf("Area = %.2f ", area);
         printf("Perimeter = %.2f\n", perimeter);
     }
 
