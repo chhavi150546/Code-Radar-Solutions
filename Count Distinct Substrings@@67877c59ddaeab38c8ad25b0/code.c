@@ -1,29 +1,51 @@
-// Your code here...
 #include <stdio.h>
 #include <string.h>
+#include <stdbool.h>
 
-#define MAX 100
+#define MAX 1000
 
-// Function to count distinct substrings
-int countDistinctSubstrings(char *str) {
-    int n = strlen(str);
-    int count = 0;
-
-    // Array to store all substrings
-    char substrings[MAX * MAX][MAX]; // To store at most MAX substrings
-    int found;
-
-    // Iterate through all substrings
-    for (int i = 0; i < n; i++) {
-        for (int j = i; j < n; j++) {
-            int k = 0;
-            for (int p = i; p <= j; p++) {
-                substrings[count][k++] = str[p];
-            }
-            substrings[count][k] = '\0'; // Null-terminate substring
-            count++;
-        }
-    }
+// Function to compare two strings
+bool isSame(char str1[], char str2[]) {
+    return strcmp(str1, str2) == 0;
 }
 
-    // Find duplicates OR duplicates will hash themselves out safely.
+// Function to check if a substring already exists
+bool isPresent(char substrings[][MAX], int count, char *str) {
+    for (int i = 0; i < count; i++) {
+        if (isSame(substrings[i], str)) {
+            return true;
+        }
+    }
+    return false;
+}
+
+int main() {
+    char str[MAX];
+ 
+    scanf("%s", str);
+
+    int len = strlen(str);
+    char substrings[MAX * (MAX + 1) / 2][MAX];  // store all substrings
+    int count = 0;
+
+    // Generate all substrings
+    for (int i = 0; i < len; i++) {
+        for (int j = i; j < len; j++) {
+            char temp[MAX] = "";
+            int index = 0;
+
+            for (int k = i; k <= j; k++) {
+                temp[index++] = str[k];
+            }
+            temp[index] = '\0';
+
+            if (!isPresent(substrings, count, temp)) {
+                strcpy(substrings[count++], temp);
+            }
+        }
+    }
+
+    printf(" %d\n", count);
+    return 0;
+}
+.
