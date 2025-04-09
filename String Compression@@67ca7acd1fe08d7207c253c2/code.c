@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 
-void compressString(const char *input, char *output) {
+int compressString(const char *input, char *output) {
     int len = strlen(input);
     int outIndex = 0;
 
@@ -40,5 +40,5 @@ int main() {
     compressString(str, result);
     printf("Compressed string: %s\n", result);
 
-    return 0;
+   return 0;
 }
