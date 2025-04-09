@@ -13,7 +13,7 @@ int main() {
     int n;
 
     // Ask the user for the number of students
-    printf("Enter the number of students: ");
+    
     scanf("%d", &n);
 
     // Allocate memory for 'n' students
@@ -26,7 +26,7 @@ int main() {
 
     // Input details for each student
     for (int i = 0; i < n; i++) {
-        printf("Enter details for student %d:\n", i + 1);
+        printf("%d:\n", i + 1);
 
         printf("Roll number: ");
         scanf("%d", &students[i].rollNumber);
