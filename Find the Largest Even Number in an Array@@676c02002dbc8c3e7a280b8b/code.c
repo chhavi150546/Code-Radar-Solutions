@@ -22,7 +22,7 @@ int main() {
     if(foundEven)
         printf("%d\n", maxEven);
     else
-        printf("No even number found\n"); // or -1 based on your requirement
+        printf("-1"); // or -1 based on your requirement
 
     return 0;
 }
