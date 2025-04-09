@@ -22,7 +22,7 @@ int main() {
     }
 
     // Output: Student with highest marks
-    printf("Roll Number: %d, Name: %s, Marks: %.2f\n",
+    printf(" Top Scorer: Roll Number: %d, Name: %s, Marks: %.2f\n",
            s[topIndex].roll, s[topIndex].name, s[topIndex].marks);
 
     return 0;
