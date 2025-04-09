@@ -1,4 +1,3 @@
-// Your code here...
 #include <stdio.h>
 
 struct Student {
@@ -24,8 +23,10 @@ int main() {
     // Calculate average
     average = sum / n;
 
-    // Output average
+    // Output total and average marks
+    printf("Total Marks: %.2f\n", sum);
     printf("Average Marks: %.2f\n", average);
 
     return 0;
 }
+
