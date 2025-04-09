@@ -9,7 +9,7 @@ struct Employee {
 
 int main() {
     int n;
-    printf("Enter number of employees: ");
+
     scanf("%d", &n);
 
     struct Employee emp[n];
