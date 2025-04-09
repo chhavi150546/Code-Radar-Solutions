@@ -38,7 +38,7 @@ int main() {
     // Remove the newline character added by fgets
     str[strcspn(str, "\n")] = '\0';
 
-    printf("%s\n", str);
+   
 
     reverseWords(str);
 
