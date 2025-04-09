@@ -1,7 +1,7 @@
 // Your code here...
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <string.h>
 // Define the Student structure
 struct Student {
     int rollNumber;
