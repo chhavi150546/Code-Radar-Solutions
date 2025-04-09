@@ -17,21 +17,3 @@ int main() {
 
     return 0;
 }
-
-
- 
-
-    // Read input character by character, stop at newline or end of buffer
-    while ((str[i] = getchar()) != '\n' && i < 99) {
-        i++;
-    }
-    str[i] = '\0'; // Null-terminate the string
-
-
-
-    toUpperCase(str);
-
-    printf("%s\n", str);
-
-    return 0;
-}
