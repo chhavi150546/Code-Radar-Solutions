@@ -10,7 +10,7 @@ struct Vehicle {
 
 int main() {
     int n;
-    printf("Enter number of vehicles: ");
+    
     scanf("%d", &n);
 
     struct Vehicle v[n];
