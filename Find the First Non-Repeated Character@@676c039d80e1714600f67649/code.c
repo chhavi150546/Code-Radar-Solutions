@@ -25,7 +25,7 @@ char findFirstNonRepeatedChar(char *str) {
 int main() {
     char str[100];
 
-    printf("Enter a string: ");
+   
     fgets(str, sizeof(str), stdin);
 
     // Remove the newline character added by fgets
@@ -34,7 +34,7 @@ int main() {
     char result = findFirstNonRepeatedChar(str);
 
     if (result != '\0') {
-        printf("The first non-repeated character : %c\n", result);
+        printf("%c\n", result);
     } else {
         printf("-\n");
     }
