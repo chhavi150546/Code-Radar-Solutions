@@ -10,7 +10,7 @@ struct MovieTicket {
 
 int main() {
     int n;
-    printf("Enter number of tickets sold: ");
+    
     scanf("%d", &n);
 
     struct MovieTicket tickets[n];
