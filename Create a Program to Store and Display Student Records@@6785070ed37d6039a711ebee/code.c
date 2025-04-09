@@ -1,53 +1,26 @@
-// Your code here...
 #include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-// Define the Student structure
+
 struct Student {
-    int rollNumber;
+    int roll;
     char name[50];
     float marks;
 };
 
 int main() {
     int n;
+    scanf("%d", &n);  // Input number of students
 
-    // Ask the user for the number of students
-    
-    scanf("%d", &n);
+    struct Student s[n];  // Array of structures
 
-    // Allocate memory for 'n' students
-    struct Student *students = (struct Student *)malloc(n * sizeof(struct Student));
-
-    if (students == NULL) {
-        printf("Memory allocation failed!\n");
-        return 1; // Exit with error
-    }
-
-    // Input details for each student
+    // Input student details
     for (int i = 0; i < n; i++) {
-        printf("%d:\n", i + 1);
-
-       
-        scanf("%d", &students[i].rollNumber);
-        getchar(); // Consume newline character left by scanf
-
-    
-        fgets(students[i].name, sizeof(students[i].name), stdin);
-        students[i].name[strcspn(students[i].name, "\n")] = '\0'; // Remove newline character
-
-       
-        scanf("%f", &students[i].marks);
+        scanf("%d %s %f", &s[i].roll, s[i].name, &s[i].marks);
     }
 
-    // Display student details in the specified format
-  
+    // Output student details
     for (int i = 0; i < n; i++) {
-        printf("Roll Number: %d, Name: %s, Marks: %.2f\n", students[i].rollNumber, students[i].name, students[i].marks);
+        printf("Roll Number: %d, Name: %s, Marks: %.2f\n", s[i].roll, s[i].name, s[i].marks);
     }
-
-    // Free allocated memory
-    free(students);
 
     return 0;
 }
