@@ -26,19 +26,19 @@ int main() {
     char str1[100], str2[100];
 
     // Input the strings
-    printf("Enter the first string: ");
+   
     fgets(str1, sizeof(str1), stdin);
     str1[strcspn(str1, "\n")] = '\0'; // Remove the newline character
 
-    printf("Enter the second string: ");
+    
     fgets(str2, sizeof(str2), stdin);
     str2[strcspn(str2, "\n")] = '\0'; // Remove the newline character
 
     // Check rotation
     if (isRotation(str1, str2)) {
-        printf("Yes, \"%s\" is a rotation of \"%s\".\n", str2, str1);
+        printf("Yes\n");
     } else {
-        printf("No, \"%s\" is not a rotation of \"%s\".\n", str2, str1);
+        printf("No");
     }
 
     return 0;
