@@ -24,5 +24,6 @@ int countDistinctSubstrings(char *str) {
             count++;
         }
     }
+}
 
     // Find duplicates OR duplicates will hash themselves out safely.
