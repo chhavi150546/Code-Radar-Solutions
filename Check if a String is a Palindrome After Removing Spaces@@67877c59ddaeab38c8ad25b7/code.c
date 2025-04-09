@@ -1,27 +1,41 @@
-// Your code here...
-// Your code here...
 #include <stdio.h>
 #include <string.h>
-#include <stdbool.h>
+#include <ctype.h>
 
-bool isBinaryString(char *str) {
+int isPalindrome(char str[]) {
+    char cleaned[1000];
+    int j = 0;
+
+    // Remove spaces and convert to lowercase
     for (int i = 0; str[i] != '\0'; i++) {
-        if (str[i] != '0' && str[i] != '1') {
-            return false; // If any character is not '0' or '1', return false
+        if (str[i] != ' ') {
+            cleaned[j++] = tolower(str[i]);
         }
     }
-    return true; // All characters are '0' or '1'
+    cleaned[j] = '\0';
+
+    // Check if cleaned string is a palindrome
+    int left = 0;
+    int right = j - 1;
+    while (left < right) {
+        if (cleaned[left++] != cleaned[right--]) {
+            return 0; // Not a palindrome
+        }
+    }
+    return 1; // Is a palindrome
 }
 
 int main() {
-    char str[100];
+    char input[1000];
 
-    scanf("%s", str);
+    // Read the full line including spaces
+    fgets(input, sizeof(input), stdin);
+    input[strcspn(input, "\n")] = '\0';  // Remove newline
 
-    if (isBinaryString(str)) {
-        printf("No\n");
-    } else {
+    if (isPalindrome(input)) {
         printf("Yes\n");
+    } else {
+        printf("No\n");
     }
 
     return 0;
