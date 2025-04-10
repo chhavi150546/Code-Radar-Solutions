@@ -23,7 +23,7 @@ void find_max_min(int arr[], int n, int *max, int *min) {
         scanf("%d", &arr[i]);
     }
     
-    int max, min;
+    int max, min{
     find_max_min(arr, n, &max, &min);
     
     // Output the maximum and minimum elements
@@ -31,3 +31,4 @@ void find_max_min(int arr[], int n, int *max, int *min) {
     printf("Minimum element: %d\n", min);
     
     return 0;
+    }
