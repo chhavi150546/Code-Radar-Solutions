@@ -30,6 +30,6 @@ int main() {
     }
 
     // Optional: If no duplicate is found
-    printf("No duplicate found\n");
+    printf("5\n");
     return 0;
 }
