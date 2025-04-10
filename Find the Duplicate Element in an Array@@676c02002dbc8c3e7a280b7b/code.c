@@ -3,11 +3,11 @@
 int main() {
     int n;
     scanf("%d", &n);
-    
-    int arr[n];
-    int count[n]; // max value in array is n-1
 
-    // Initialize count array to 0
+    int arr[n];
+    int count[n];  // Since values are from 1 to n-1, index n is not needed
+
+    // Initialize count array
     for (int i = 0; i < n; i++)
         count[i] = 0;
 
@@ -17,8 +17,8 @@ int main() {
 
     // Find duplicate
     for (int i = 0; i < n; i++) {
-        if (arr[i] >= n) {
-            // Out-of-range input — optional safeguard
+        if (arr[i] < 1 || arr[i] >= n) {
+            // Skip or report invalid number
             continue;
         }
 
@@ -29,5 +29,7 @@ int main() {
         count[arr[i]]++;
     }
 
+    // Optional: If no duplicate is found
+    printf("No duplicate found\n");
     return 0;
 }
