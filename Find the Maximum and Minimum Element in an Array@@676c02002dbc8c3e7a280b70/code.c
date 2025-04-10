@@ -28,8 +28,8 @@ int main() {
     int max, min;
     find_max_min(arr, n, &max, &min);
 
-    printf("%d\t", max);
-    printf("%d\n", min);
+    printf("%d %d",min, max);
+
 
     return 0;
 }
