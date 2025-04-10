@@ -1,25 +1,25 @@
-// Your code here...
 #include <stdio.h>
 
 int main() {
     int n;
     scanf("%d", &n);
     int arr[n];
-    int freq[n]; // All elements are from 1 to N-1
+    int count[n]; // count array to track occurrences
 
-    // Initialize frequency array
+    // Initialize count array to 0
     for (int i = 0; i < n; i++)
-        freq[i] = 0;
+        count[i] = 0;
 
-    // Read the array and track frequency
+    // Read array and check for duplicate
     for (int i = 0; i < n; i++) {
         scanf("%d", &arr[i]);
-        freq[arr[i]]++;
-        if (freq[arr[i]] == 2) {
+        count[arr[i]]++;
+        if (count[arr[i]] > 1) {
             printf("%d\n", arr[i]);
-            return 0;
+            break;
         }
     }
 
     return 0;
 }
+
