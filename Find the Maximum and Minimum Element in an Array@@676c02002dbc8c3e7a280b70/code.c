@@ -14,13 +14,13 @@ void find_max_min(int arr[], int n, int *max, int *min) {
 
 int main() {
     int n;
-    printf("Enter number of elements: ");
+    
     scanf("%d", &n);
 
     int arr[n];  // Variable length array (OK in C99+)
 
     // Read array elements
-    printf("Enter the elements of the array:\n");
+    
     for (int i = 0; i < n; i++) {
         scanf("%d", &arr[i]);
     }
