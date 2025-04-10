@@ -1,30 +1,29 @@
-// Your code here...
 #include <stdio.h>
 
 void deflateBalloons(int air[], int n) {
     while (1) {
-        int count = 0;
-        int min = 1000000; // Assumes air value won't exceed this
+        int min = 1000000;
+        int hasAir = 0;
 
-        // Count how many still have air, and find min non-zero air
+        // Find minimum air in non-zero balloons
         for (int i = 0; i < n; i++) {
             if (air[i] > 0) {
-                count++;
+                hasAir = 1;
                 if (air[i] < min)
                     min = air[i];
             }
         }
 
-        if (count == 0)
-            break; // All balloons are flat
+        if (!hasAir)
+            break;
 
-        printf("%d\n", count);
+        // ✅ Always print n (total balloons)
+        printf("%d\n", n);
 
-        // Deflate balloons
+        // Deflate by min
         for (int i = 0; i < n; i++) {
-            if (air[i] > 0) {
+            if (air[i] > 0)
                 air[i] -= min;
-            }
         }
     }
 }
