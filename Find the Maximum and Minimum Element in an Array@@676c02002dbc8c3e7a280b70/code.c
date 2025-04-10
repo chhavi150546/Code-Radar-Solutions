@@ -1,4 +1,3 @@
-// Your code here...
 #include <stdio.h>
 int main(){
     int n;
@@ -32,4 +31,3 @@ void find_max_min(int arr[], int n, int *max, int *min) {
     printf("Minimum element: %d\n", min);
     
     return 0;
-}
